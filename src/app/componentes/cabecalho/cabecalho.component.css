@@ -1,12 +1,12 @@
 .cabecalho {
-    background-size: cover;
-    background-color: blue; 
-    padding: 8px;
-    text-align: center;
+  background-size: cover;
+  background-color: blue;
+  padding: 8px;
+  text-align: center;
 }
 
-.cabecalho > h1{
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    font-weight: normal;   
+.cabecalho > h1 {
+  font-family: "Roboto", sans-serif;
+  color: white;
+  font-weight: normal;
 }
