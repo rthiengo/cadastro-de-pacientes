@@ -3,8 +3,3 @@
 /*O sinal ~ é usado para referenciar a pasta node_modules*/
 @import "~materialize-css/dist/css/materialize.css";
 @import "~material-icons/iconfont/material-icons.css";
-
-* {
-  margin: 0;
-  padding: 0;
-}
