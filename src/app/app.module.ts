@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { CabecalhoComponent } from './componentes/cabecalho/cabecalho.component';
 import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { PaginaInicialComponent } from './componentes/pagina-inicial/pagina-inicial.component';
+import { AdicionarComponent } from './componentes/adicionar/adicionar.component';
+import { RemoverComponent } from './componentes/remover/remover.component';
 
 @NgModule({
-  declarations: [AppComponent, CabecalhoComponent, RodapeComponent, PaginaInicialComponent],
+  declarations: [AppComponent, CabecalhoComponent, RodapeComponent, PaginaInicialComponent, AdicionarComponent, RemoverComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
