@@ -8,9 +8,11 @@ import { RodapeComponent } from './componentes/rodape/rodape.component';
 import { PaginaInicialComponent } from './componentes/pagina-inicial/pagina-inicial.component';
 import { AdicionarComponent } from './componentes/adicionar/adicionar.component';
 import { RemoverComponent } from './componentes/remover/remover.component';
+import { PacienteComponent } from './componentes/paciente/paciente.component';
+import { ListarPacienteComponent } from './componentes/listar-paciente/listar-paciente.component';
 
 @NgModule({
-  declarations: [AppComponent, CabecalhoComponent, RodapeComponent, PaginaInicialComponent, AdicionarComponent, RemoverComponent],
+  declarations: [AppComponent, CabecalhoComponent, RodapeComponent, PaginaInicialComponent, AdicionarComponent, RemoverComponent, PacienteComponent, ListarPacienteComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
