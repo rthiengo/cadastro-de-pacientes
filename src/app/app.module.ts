@@ -10,10 +10,21 @@ import { AdicionarComponent } from './componentes/adicionar/adicionar.component'
 import { RemoverComponent } from './componentes/remover/remover.component';
 import { PacienteComponent } from './componentes/paciente/paciente.component';
 import { ListarPacienteComponent } from './componentes/listar-paciente/listar-paciente.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, CabecalhoComponent, RodapeComponent, PaginaInicialComponent, AdicionarComponent, RemoverComponent, PacienteComponent, ListarPacienteComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    CabecalhoComponent,
+    RodapeComponent,
+    PaginaInicialComponent,
+    AdicionarComponent,
+    RemoverComponent,
+    PacienteComponent,
+    ListarPacienteComponent,
+  ],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

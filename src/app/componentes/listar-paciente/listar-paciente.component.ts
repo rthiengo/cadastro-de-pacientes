@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Paciente } from '../paciente';
+import { PacienteService } from '../paciente.service';
 
 @Component({
   selector: 'app-listar-paciente',
@@ -6,33 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./listar-paciente.component.css'],
 })
 export class ListarPacienteComponent implements OnInit {
-  listaPacientes = [
-    {
-      nome: 'José da Silva Matos',
-      sexo: 'M',
-      idade: '72',
-    },
-    {
-      nome: 'Maria Aparecida Soares',
-      sexo: 'F',
-      idade: '79',
-    },
-    {
-      nome: 'Francineide Rosa dos Santos',
-      sexo: 'F',
-      idade: '67',
-    },
-    {
-      nome: 'Juscelino Gomes de Almeida',
-      sexo: 'M',
-      idade: '81',
-    },
-  ];
+  listaPacientes: Paciente[] = [];
 
-  constructor() {}
+  constructor(private service: PacienteService) {}
 
-  ngOnInit(): void {}
-
-  
-
+  ngOnInit(): void {
+    this.service.listar().subscribe((listaPacientes) => {
+      this.listaPacientes = listaPacientes;
+    });
+    
+  }
 }

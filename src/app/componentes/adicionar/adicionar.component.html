@@ -1,146 +1,143 @@
-<div class="row">
-  <form class="col s12">
-    <h5>Dados Pessoais</h5>
-    <div class="input-field col s6">
-      <input type="text" id="nome" />
-      <label for="nome">Nome do Paciente</label>
+<form class="col s12">
+  <h5>Dados Pessoais</h5>
+  <section>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="nome" name="nome" [(ngModel)]="paciente.nome" />
+        <label for="nome">Nome do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="text" id="sexo" name="sexo" [(ngModel)]="paciente.sexo" />
+        <label for="nome">Sexo do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input
+          type="number"
+          id="idade"
+          name="idade"
+          [(ngModel)]="paciente.idade"
+        />
+        <label for="idade">Idade do Paciente</label>
+      </div>
     </div>
-    <div class="input-field col s3">
-      <input type="text" id="sexo" />
-      <label for="nome">Sexo do Paciente</label>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="nome" />
+        <label for="nome">Endereço do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="text" id="sexo" />
+        <label for="nome">Cidade do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="text" id="idade" />
+        <label for="idade">Estado do Paciente</label>
+      </div>
     </div>
-    <div class="input-field col s3">
-      <input type="text" id="idade" />
-      <label for="idade">Idade do Paciente</label>
-    </div>
-  </form>
-</div>
-<div class="row">
-  <form class="col s12">
-    <div class="input-field col s6">
-      <input type="text" id="nome" />
-      <label for="nome">Endereço do Paciente</label>
-    </div>
-    <div class="input-field col s3">
-      <input type="text" id="sexo" />
-      <label for="nome">Cidade do Paciente</label>
-    </div>
-    <div class="input-field col s3">
-      <input type="text" id="idade" />
-      <label for="idade">Estado do Paciente</label>
-    </div>
-  </form>
-</div>
+  </section>
 
-<div class="row">
-  <form class="col s12">
-    <h5>Dados Clínicos</h5>
-    <br />
-    <p [style.backgroundColor]="'grey'">Comorbidades:</p>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="comorbidade1" />
-        <span>Hipertensão</span>
-      </label>
+  <h5>Dados Clínicos</h5>
+  <section>
+    <p>Comorbidades:</p>
+    <div class="row">
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="comorbidade1" />
+          <span>Hipertensão</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="comorbidade2" />
+          <span>Obesidade</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="comorbidade3" />
+          <span>Diabetes</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="comorbidade4" />
+          <span>Doenças Pulmonares</span>
+        </label>
+      </div>
     </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="comorbidade2" />
-        <span>Obesidade</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="comorbidade3" />
-        <span>Diabetes</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="comorbidade4" />
-        <span>Doenças Pulmonares</span>
-      </label>
-    </div>
-  </form>
-</div>
 
-<div class="row">
-  <form class="col s12">
-    <br />
     <p>Sintomas:</p>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="sintoma1" />
-        <span>Febre</span>
-      </label>
+    <div class="row">
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="sintoma1" />
+          <span>Febre</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="sintoma2" />
+          <span>Tosse Constante</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="sintoma3" />
+          <span>Dor de Cabeça</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input class="filled-in" type="checkbox" id="sintoma4" />
+          <span>Perda de Olfato</span>
+        </label>
+      </div>
     </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="sintoma2" />
-        <span>Tosse Constante</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="sintoma3" />
-        <span>Dor de Cabeça</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input class="filled-in" type="checkbox" id="sintoma4" />
-        <span>Perda de Olfato</span>
-      </label>
-    </div>
-  </form>
-</div>
 
-<div class="row">
-  <form class="col s12">
     <p>Variante da Covid19:</p>
-    <div class="col s2">
-      <label>
-        <input name="variantes" type="radio" id="variante1" />
-        <span>Omicron</span>
-      </label>
+    <div class="row">
+      <div class="col s2">
+        <label>
+          <input name="variantes" type="radio" id="variante1" />
+          <span>Omicron</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input name="variantes" type="radio" id="variante2" />
+          <span>Delta</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input name="variantes" type="radio" id="variante3" />
+          <span>EG5</span>
+        </label>
+      </div>
+      <div class="col s2">
+        <label>
+          <input name="variantes" type="radio" id="variante4" />
+          <span>BA6</span>
+        </label>
+      </div>
     </div>
-    <div class="col s2">
-      <label>
-        <input name="variantes" type="radio" id="variante2" />
-        <span>Delta</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input name="variantes" type="radio" id="variante3" />
-        <span>EG5</span>
-      </label>
-    </div>
-    <div class="col s2">
-      <label>
-        <input name="variantes" type="radio" id="variante4" />
-        <span>BA6</span>
-      </label>
-    </div>
-  </form>
-</div>
 
-<div class="row">
-  <form class="col s12">
-    <div class="input-field col s2">
-      <input type="text" id="dias" />
-      <label for="dias">Dias de infecção</label>
+    <div class="row">
+      <div class="input-field col s2">
+        <input type="text" id="dias" />
+        <label for="dias">Dias de infecção</label>
+      </div>
     </div>
-  </form>
-</div>
+  </section>
 
-<div class="row">
-  <!--Event Binding: do template para o component-->
-  <a
-    href="#"
-    (click)="adicionarPaciente()"
-    class="waves-effect waves-light btn-large green"
-    >Salvar</a
-  >
-  <a routerLink="/" class="waves-effect waves-light btn-large red">Cancelar</a>
-</div>
+  <div class="row">
+    <a
+      (click)="adicionarPaciente()"
+      class="waves-effect waves-light btn-large green"
+      >Salvar</a
+    >
+    <a routerLink="/" class="waves-effect waves-light btn-large red"
+      >Cancelar</a
+    >
+  </div>
+</form>

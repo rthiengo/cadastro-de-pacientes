@@ -1,0 +1,22 @@
+{
+  "pacientes": [
+    {
+      "nome": "Kimberly da Costa Souza",
+      "sexo": "F",
+      "idade": 22,
+      "id": 1
+    },
+    {
+      "nome": "Jeicóbi da Silva Andrade",
+      "sexo": "M",
+      "idade": 23,
+      "id": 2
+    },
+    {
+      "nome": "Barruã de Medeiros Santos",
+      "sexo": "M",
+      "idade": 40,
+      "id": 3
+    }
+  ]
+}
