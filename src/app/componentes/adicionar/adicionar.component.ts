@@ -1,6 +1,7 @@
 import { PacienteService } from './../paciente.service';
 import { Paciente } from './../paciente';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-adicionar',
@@ -14,15 +15,17 @@ export class AdicionarComponent implements OnInit {
     idade: 1,
   };
 
-  constructor(private service: PacienteService) {}
+  constructor(private service: PacienteService, private router: Router) {}
 
   ngOnInit(): void {}
 
   adicionarPaciente() {
-    this.service.criar(this.paciente).subscribe();
+    this.service.criar(this.paciente).subscribe(() => {
+      this.router.navigate(['/listar']);
+    });
   }
 
   cancelar() {
-    alert('Ação cancelada');
+    this.router.navigate(['/listar']);
   }
 }

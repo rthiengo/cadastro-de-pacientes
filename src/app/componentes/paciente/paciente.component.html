@@ -1,8 +1,16 @@
-<div>
-  <p>
-    Nome:  <b>{{ paciente.nome }}</b> <br />
+<div class="paciente">
+  <div class="dados">
+    Nome: <b>{{ paciente.nome }}</b> <br />
     Sexo: {{ paciente.sexo }} <br />
     Idade: {{ paciente.idade }}
-  </p>
+  </div>
+  <div class="acoes">
+    <button routerLink="/editar/{{ paciente.id }}">
+      <i class="material-icons">edit</i>
+    </button>
+    <button routerLink="/remover/{{ paciente.id }}">
+      <i class="material-icons">delete</i>
+    </button>
+  </div>
   <br />
 </div>

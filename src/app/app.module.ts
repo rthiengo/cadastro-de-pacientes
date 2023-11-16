@@ -12,6 +12,7 @@ import { PacienteComponent } from './componentes/paciente/paciente.component';
 import { ListarPacienteComponent } from './componentes/listar-paciente/listar-paciente.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EditarComponent } from './componentes/editar/editar.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FormsModule } from '@angular/forms';
     RemoverComponent,
     PacienteComponent,
     ListarPacienteComponent,
+    EditarComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

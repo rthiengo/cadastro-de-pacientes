@@ -1,1 +1,24 @@
-<p>remover works!</p>
+<div class="container caixa">
+  <div class="row">
+    <p>
+      <b>
+        O paciente será excluido. <br />
+        Confirma a exclusão?
+      </b>
+    </p>
+  </div>
+  <div class="row">
+    <button
+      class="botao waves-effect waves-light btn-large red"
+      (click)="excluir()"
+    >
+      Excluir
+    </button>
+    <button
+      class="botao waves-effect waves-light btn-large blue"
+      (click)="cancelar()"
+    >
+      Cancelar
+    </button>
+  </div>
+</div>

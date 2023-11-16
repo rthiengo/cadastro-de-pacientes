@@ -18,4 +18,22 @@ export class PacienteService {
   criar(paciente: Paciente): Observable<Paciente> {
     return this.http.post<Paciente>(this.API, paciente);
   }
+
+  editar(paciente: Paciente): Observable<Paciente>{
+    const url = `${this.API}/${paciente.id}`
+    return this.http.put<Paciente>(url, paciente)
+  }
+
+  excluir(id: number): Observable<Paciente>{
+    const url = `${this.API}/${id}`
+    return this.http.delete<Paciente>(url)
+  }
+
+  buscarPorId(id: number): Observable<Paciente>{
+    const url = `${this.API}/${id}`
+    return this.http.get<Paciente>(url)
+  }
+
+  
+
 }
