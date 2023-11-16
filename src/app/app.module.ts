@@ -11,7 +11,7 @@ import { RemoverComponent } from './componentes/remover/remover.component';
 import { PacienteComponent } from './componentes/paciente/paciente.component';
 import { ListarPacienteComponent } from './componentes/listar-paciente/listar-paciente.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EditarComponent } from './componentes/editar/editar.component';
 
 @NgModule({
@@ -26,7 +26,13 @@ import { EditarComponent } from './componentes/editar/editar.component';
     ListarPacienteComponent,
     EditarComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule, //permite formulário reativo
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

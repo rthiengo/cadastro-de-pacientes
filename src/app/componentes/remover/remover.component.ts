@@ -15,6 +15,13 @@ export class RemoverComponent implements OnInit{
     nome: '',
     sexo: '',
     idade: 1,
+    endereco:'',
+    cidade:'',
+    estado:'',
+    comorbidades:'',
+    sintomas:'',
+    variante:'',
+    dias: 1,
   };
 
   constructor(

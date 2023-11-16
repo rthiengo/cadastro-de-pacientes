@@ -1,143 +1,103 @@
-<form class="col s12">
+<form class="col s12" [formGroup]="formulario">
   <h5>Dados Pessoais</h5>
   <section>
     <div class="row">
       <div class="input-field col s6">
-        <input type="text" id="nome" name="nome" [(ngModel)]="paciente.nome" />
+        <input type="text" id="nome" formControlName="nome" />
         <label for="nome">Nome do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="
+            formulario.get('nome')?.errors && formulario.get('nome')?.touched
+          "
+        >
+          Campo é obrigatório!
+        </div>
       </div>
+
       <div class="input-field col s3">
-        <input type="text" id="sexo" name="sexo" [(ngModel)]="paciente.sexo" />
-        <label for="nome">Sexo do Paciente</label>
+        <input type="text" id="sexo" formControlName="sexo" />
+        <label for="sexo">Sexo do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('sexo')?.errors?.['required'] && formulario.get('sexo')?.touched"
+        >
+          Campo é obrigatório e deve conter F ou M
+        </div>
       </div>
+
       <div class="input-field col s3">
-        <input
-          type="number"
-          id="idade"
-          name="idade"
-          [(ngModel)]="paciente.idade"
-        />
+        <input type="number" id="idade" formControlName="idade" />
         <label for="idade">Idade do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="
+            formulario.get('idade')?.errors?.['required'] && formulario.get('idade')?.touched
+          "
+        >
+          Campo é obrigatório
+        </div>
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('idade')?.errors?.['max'] && formulario.get('idade')?.touched"
+        >
+          Idade permitida entre 0 e 140
+        </div>
       </div>
     </div>
+
     <div class="row">
       <div class="input-field col s6">
-        <input type="text" id="nome" />
-        <label for="nome">Endereço do Paciente</label>
+        <input type="text" id="endereco" formControlName="endereco" />
+        <label for="endereco">Endereço do Paciente</label>
       </div>
       <div class="input-field col s3">
-        <input type="text" id="sexo" />
-        <label for="nome">Cidade do Paciente</label>
+        <input type="text" id="cidade" formControlName="cidade" />
+        <label for="cidade">Cidade do Paciente</label>
       </div>
       <div class="input-field col s3">
-        <input type="text" id="idade" />
-        <label for="idade">Estado do Paciente</label>
+        <input type="text" id="estado" formControlName="estado" />
+        <label for="estado">Estado do Paciente</label>
       </div>
     </div>
   </section>
 
   <h5>Dados Clínicos</h5>
   <section>
-    <p>Comorbidades:</p>
     <div class="row">
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="comorbidade1" />
-          <span>Hipertensão</span>
-        </label>
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="comorbidades" />
+        <label for="comorbidades">Comorbidades</label>
       </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="comorbidade2" />
-          <span>Obesidade</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="comorbidade3" />
-          <span>Diabetes</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="comorbidade4" />
-          <span>Doenças Pulmonares</span>
-        </label>
-      </div>
-    </div>
-
-    <p>Sintomas:</p>
-    <div class="row">
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="sintoma1" />
-          <span>Febre</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="sintoma2" />
-          <span>Tosse Constante</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="sintoma3" />
-          <span>Dor de Cabeça</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input class="filled-in" type="checkbox" id="sintoma4" />
-          <span>Perda de Olfato</span>
-        </label>
-      </div>
-    </div>
-
-    <p>Variante da Covid19:</p>
-    <div class="row">
-      <div class="col s2">
-        <label>
-          <input name="variantes" type="radio" id="variante1" />
-          <span>Omicron</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input name="variantes" type="radio" id="variante2" />
-          <span>Delta</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input name="variantes" type="radio" id="variante3" />
-          <span>EG5</span>
-        </label>
-      </div>
-      <div class="col s2">
-        <label>
-          <input name="variantes" type="radio" id="variante4" />
-          <span>BA6</span>
-        </label>
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="sintomas" />
+        <label for="sintomas">Sintomas</label>
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field col s2">
-        <input type="text" id="dias" />
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="variante" />
+        <label for="variante">Variante da Covid-19</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" id="dias" formControlName="dias" />
         <label for="dias">Dias de infecção</label>
       </div>
     </div>
   </section>
 
   <div class="row">
-    <a
+    <button
+      [disabled]="!formulario.valid"
       (click)="adicionarPaciente()"
+      [ngClass]="habilitarBotao()"
       class="waves-effect waves-light btn-large green"
-      >Salvar</a
     >
-    <a (click)="cancelar()" class="waves-effect waves-light btn-large red"
-      >Cancelar</a
-    >
+      Salvar
+    </button>
+    <button (click)="cancelar()" class="waves-effect waves-light btn-large red">
+      Cancelar
+    </button>
   </div>
 </form>
