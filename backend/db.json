@@ -1,0 +1,30 @@
+{
+  "pacientes": [
+    {
+      "id": 2,
+      "nome": "Marcondes de Oliveira ",
+      "sexo": "M",
+      "idade": 77,
+      "endereco": "Rua das Araras, 56, fundos",
+      "cidade": "Santa Maria",
+      "estado": "MA",
+      "comorbidades": "Obesidade",
+      "sintomas": "Tosse",
+      "variante": "Omicron",
+      "dias": "7"
+    },
+    {
+      "id": 3,
+      "nome": "Neide Aparecida da Costa",
+      "sexo": "F",
+      "idade": 88,
+      "endereco": "Rua Pereira Nunes, 6, 122",
+      "cidade": "Taubaté",
+      "estado": "SP",
+      "comorbidades": "Diabetes",
+      "sintomas": "Tosse",
+      "variante": "Delta",
+      "dias": "8"
+    }
+  ]
+}

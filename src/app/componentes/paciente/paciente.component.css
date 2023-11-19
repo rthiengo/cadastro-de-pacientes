@@ -1,0 +1,29 @@
+.paciente {
+  background-color: lightgrey;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  padding: 15px;
+  display: grid; /*define o elemento com grid container*/
+  grid-template-columns: 1fr 1fr 1fr; /*define o numero de colunas que existirão no grid. Nesse caso serão 3 colunas do mesmo tamanho.*/
+  /* grid-template-rows: 1fr; */
+  grid-template-areas:
+      "dados dados acoes";
+}
+
+.dados{
+  
+  grid-area: dados;
+}
+
+.acoes {
+  grid-area: acoes;
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  margin: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+}

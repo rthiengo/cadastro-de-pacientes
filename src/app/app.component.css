@@ -1,0 +1,13 @@
+.my-logo {
+  height: 64px;
+}
+
+/*Fixa o rodapé no final da pagina*/
+:host {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+main {
+  flex: 1 0 auto;
+}

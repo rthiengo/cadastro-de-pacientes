@@ -1,0 +1,18 @@
+<section class="container">
+  <header>
+    <h5>Lista de Pacientes</h5>
+  </header>
+  <div *ngIf="listaPacientes.length > 0, else semPacientes">
+
+    <div *ngFor="let paciente of listaPacientes">
+      <app-paciente [paciente]="paciente"></app-paciente>
+    </div>
+    
+  </div>
+</section>
+
+<ng-template #semPacientes>
+  <div>
+    <p>Ainda não existem pacientes cadastrados!</p>
+  </div>
+</ng-template>

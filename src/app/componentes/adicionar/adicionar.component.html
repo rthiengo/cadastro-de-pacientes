@@ -1,0 +1,103 @@
+<form class="col s12" [formGroup]="formulario">
+  <h5>Dados Pessoais</h5>
+  <section>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="nome" />
+        <label for="nome">Nome do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="
+            formulario.get('nome')?.errors && formulario.get('nome')?.touched
+          "
+        >
+          Campo é obrigatório!
+        </div>
+      </div>
+
+      <div class="input-field col s3">
+        <input type="text" id="sexo" formControlName="sexo" />
+        <label for="sexo">Sexo do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('sexo')?.errors?.['required'] && formulario.get('sexo')?.touched"
+        >
+          Campo é obrigatório e deve conter F ou M
+        </div>
+      </div>
+
+      <div class="input-field col s3">
+        <input type="number" id="idade" formControlName="idade" />
+        <label for="idade">Idade do Paciente</label>
+        <div
+          class="mensagem__erro"
+          *ngIf="
+            formulario.get('idade')?.errors?.['required'] && formulario.get('idade')?.touched
+          "
+        >
+          Campo é obrigatório
+        </div>
+        <div
+          class="mensagem__erro"
+          *ngIf="formulario.get('idade')?.errors?.['max'] && formulario.get('idade')?.touched"
+        >
+          Idade permitida entre 0 e 140
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="endereco" formControlName="endereco" />
+        <label for="endereco">Endereço do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="text" id="cidade" formControlName="cidade" />
+        <label for="cidade">Cidade do Paciente</label>
+      </div>
+      <div class="input-field col s3">
+        <input type="text" id="estado" formControlName="estado" />
+        <label for="estado">Estado do Paciente</label>
+      </div>
+    </div>
+  </section>
+
+  <h5>Dados Clínicos</h5>
+  <section>
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="comorbidades" />
+        <label for="comorbidades">Comorbidades</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="sintomas" />
+        <label for="sintomas">Sintomas</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <input type="text" id="nome" formControlName="variante" />
+        <label for="variante">Variante da Covid-19</label>
+      </div>
+      <div class="input-field col s6">
+        <input type="text" id="dias" formControlName="dias" />
+        <label for="dias">Dias de infecção</label>
+      </div>
+    </div>
+  </section>
+
+  <div class="row">
+    <button
+      [disabled]="!formulario.valid"
+      (click)="adicionarPaciente()"
+      [ngClass]="habilitarBotao()"
+      class="waves-effect waves-light btn-large green"
+    >
+      Salvar
+    </button>
+    <button (click)="cancelar()" class="waves-effect waves-light btn-large red">
+      Cancelar
+    </button>
+  </div>
+</form>
