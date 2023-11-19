@@ -1,19 +1,6 @@
 {
   "pacientes": [
     {
-      "id": 1,
-      "nome": "Genivaldo Cruz de Mello",
-      "sexo": "M",
-      "idade": 18,
-      "endereco": "Est da Agua Grande, 221, bl15, ap501, Irajá",
-      "cidade": "Rio de Janeiro",
-      "estado": "RJ",
-      "comorbidades": "Obesidade",
-      "sintomas": "Dor de Cabeça",
-      "variante": "Omicron",
-      "dias": "6"
-    },
-    {
       "id": 2,
       "nome": "Marcondes de Oliveira ",
       "sexo": "M",
