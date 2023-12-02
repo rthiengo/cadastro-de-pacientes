@@ -30,4 +30,4 @@ https://www.figma.com/file/JlfSZ3jDXkwrVeiUnEnSvA/Prototipo-do-projeto?type=desi
 - [x] Apresentar uma lista de dados com a diretiva estrutural ngFor.
 - [x] Usar a diretiva ngIf
 - [ ] Formatar a apresentação de dados com Pipes.
-- [ ] Build e deploy da aplicação.
+- [x] Build e deploy da aplicação.
