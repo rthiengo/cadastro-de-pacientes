@@ -3,6 +3,10 @@
 Cadastro de pacientes com covid-19 e seus sintomas.
 Projeto da disciplina Framework Web da Pós Graduação da UTFPR
 
+## Link para vídeo de apresentação do projeto
+
+https://youtu.be/65p2RJZ8QcE
+
 ## Endereço de Deploy - GitHub Pages
 
 https://rthiengo.github.io/cadastro-de-pacientes/
