@@ -5,6 +5,8 @@ Projeto da disciplina Framework Web da Pós Graduação da UTFPR
 
 ## Endereço de Deploy - GitHub Pages
 
+https://rthiengo.github.io/cadastro-de-pacientes/
+
 ## Protótipo
 
 https://www.figma.com/file/JlfSZ3jDXkwrVeiUnEnSvA/Prototipo-do-projeto?type=design&node-id=5-56&mode=design&t=corBbhjFY5Ht8Jfp-0
