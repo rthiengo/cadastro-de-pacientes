@@ -1,19 +1,6 @@
 {
   "pacientes": [
     {
-      "id": 2,
-      "nome": "Marcondes de Oliveira ",
-      "sexo": "M",
-      "idade": 75,
-      "endereco": "Rua das Araras, 56, fundos",
-      "cidade": "Santa Maria",
-      "estado": "MA",
-      "comorbidades": "Obesidade",
-      "sintomas": "Tosse",
-      "variante": "Omicron",
-      "dias": "7"
-    },
-    {
       "id": 3,
       "nome": "Neide Aparecida da Costa",
       "sexo": "F",
@@ -25,6 +12,19 @@
       "sintomas": "Tosse",
       "variante": "Delta",
       "dias": "8"
+    },
+    {
+      "id": 4,
+      "nome": "Jose da Silva Xavier",
+      "sexo": "M",
+      "idade": 78,
+      "endereco": "Rua Amerlinda Gonçalves, 38, Val Paraiso",
+      "cidade": "São Tomé dos Códigos",
+      "estado": "TT",
+      "comorbidades": "Obesidade",
+      "sintomas": "Tosse e dor de cabeça",
+      "variante": "Omicron",
+      "dias": "5"
     }
   ]
 }
